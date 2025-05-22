@@ -1,0 +1,64 @@
+/* style.css - ton style personnalisé avec Tailwind CDN */
+
+.btn-whatsapp {
+  border-radius: 0.25rem;
+  background-color: #22c55e;
+  padding: 0.5rem 1rem;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+              0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.btn-whatsapp:hover {
+  background-color: #16a34a;
+}
+
+.lang-switch {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #2563eb;
+  padding: 0.25rem 0.75rem;
+  color: white;
+}
+.lang-switch:hover {
+  background-color: #1d4ed8;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.gallery-img {
+  height: 15rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.footer-link {
+  margin: 0 0.5rem;
+  color: #93c5fd;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.gallery-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  border-radius: 0.25rem;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+              0 1px 2px rgba(0, 0, 0, 0.06);
+}

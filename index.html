@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <title>N&M EXPPRESS Ltd</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--tailwind css CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- custom css-->>
+    <!-- custom css-->
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -15,8 +14,8 @@
     <!-- LANG SWITCH -->
 
     <div class="flex justify-end p-4">
-        <button onclick="SetLang('fr')" class="lang-switch">FR</button>
-        <button onclick="SetLang('en')" class="lang-switch">EN</button>
+        <button onclick="setLang('fr')" class="lang-switch">FR</button>
+        <button onclick="setLang('en')" class="lang-switch">EN</button>
 
     </div>
 
@@ -27,7 +26,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <div>
                 <h1 class="text-3xl font-bold text-blue-800">N&M EXPPRESS Ltd</h1>
-                <p class="italic text gray-500  lang lang-en">"THE PERFECT LOGISTICS"</p>
+                <p class="italic text-gray-500  lang lang-en">"THE PERFECT LOGISTICS"</p>
                 <p class="italic text-gray-500  lang lang-fr hidden">"LA LOGISTIQUE PARFAITE"</p>
             </div>
             <a href="https://wa.me/250788699245" class="btn-whatsapp">Whatsapp</a>
@@ -79,20 +78,22 @@
     <section class="gallery-section">
         <h2 class="section-title text-center lang lang-en">Our Logistics in action</h2>
         <h2 class="section-title text-center lang lang-fr hidden">Notre logistique en action</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1600267165558-533431c0bbda" alt="Shipping container" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1581091012184-5c8f8291cdde" alt="Logistics truck" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1613828832284-9f2dbb922f96" alt="Warehouse logistics" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1612198246019-5e4bfa5b300e" alt="Air freight" class="gallery-img">
-            <img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0" alt="Client communication" class="gallery-img">
+        <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+            <img src="https://images.unsplash.com/photo-1600267165558-533431c0bbda?auto=format&fit=crop&w=800&q=80" alt="Shipping container" class="gallery-img rounded shadow object-cover w-full h-48">
+            <img src="https://images.unsplash.com/photo-1581091012184-5c8f8291cdde?auto=format&fit=crop&w=800&q=80" alt="Logistics truck" class="gallery-img rounded shadow object-cover w-full h-48">
+            <img src="https://images.unsplash.com/photo-1613828832284-9f2dbb922f96?auto=format&fit=crop&w=800&q=80" alt="Warehouse logistics" class="gallery-img rounded shadow object-cover w-full h-48">
+            <img src="https://images.unsplash.com/photo-1612198246019-5e4bfa5b300e?auto=format&fit=crop&w=800&q=80" alt="Air freight" class="gallery-img rounded shadow object-cover w-full h-48">
+            <img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=800&q=80" alt="Client communication" class="gallery-img rounded shadow object-cover w-full h-48">
+
+
         </div>
         <!-- CONTACT -->
     </section>
     
     
     <section class="max-w-3xl mx-auto bg-gray-50 p-6 mt-6 rounded shadow">
-        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang lang-en"> Contact & Address</h3>
-        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang lang-fr hidden"> Contact & Adresse</h3>
+        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang-en"> Contact & Address</h3>
+        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang-fr hidden"> Contact & Adresse</h3>
 
         <p> Phone : <strong> +250 788 586 822</strong> / <strong>+250 788 699 245 </strong></p>
         <p> Email : <a href="mailto: nmexpressltd@gmail.com" class="text-blue-600 underline">nmexpressltd@gmail.com</a></p>
@@ -102,7 +103,7 @@
     <!-- FOOTER -->
 
     <footer class="bg-blue-900 text-white text-center p-4 mt-6 ">
-        <p class="lang lang-en">&copy; 2025 N&M EXPPRESS Ltd - All right reserved</p>
+        <p class="lang lang-en">&copy; 2025 N&M EXPPRESS Ltd - All rights reserved</p>
         <p class="lang lang-fr hidden">&copy; 2025 N&M EXPPRESS Ltd - Tous droits réservés</p>
         <div class="mt-2">
             <a href="#" class="footer-link">Facebook</a>
@@ -114,12 +115,17 @@
 
     <script>
         function setLang(lang){
-            document.querySelectorAll('.lang').forEach(el => el)
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
         }
 
-        // default language: English
-        setLang('en');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set default language to English
+            setLang('en');
+        });
+        
+       
 
     </script>
     </body>
