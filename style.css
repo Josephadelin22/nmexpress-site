@@ -1,0 +1,46 @@
+/*N&M EXPRESS LTD - Style.css*/
+
+/* 1. base : import Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Font globale*/
+.font-custom {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* 3. Boutons */
+.btn-whatsapp {
+    @apply bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 shadow;
+}
+
+.lang-switch {
+    @apply bg-blue-600 text-white px-3 py-1 rounded mx-1;
+}
+
+/* 4. Titres de sections*/
+.section-title {
+    @apply text-2xl font-bold text-blue-700 mb-4;
+}
+
+/* 5. Gallerie d'images */
+.gallery-img {
+    @apply rounded-lg shadow-lg transition-transform transform hover:scale-105 w-full h-60 object-cover;
+}
+.gallery-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6;
+}
+/* 6. Footer */
+.footer-link {
+    @apply mx-2 text-blue-300 hover:underline;
+}
+footer {
+    background-color: #1e3a8a;/* bleu profond */
+}
+
+/* 7. Galery container */
+.gallery-section {
+    @apply max-w-6xl mx-auto bg-white p-6 rounded shadow;
+}

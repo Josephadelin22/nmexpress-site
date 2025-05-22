@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N&M EXPPRESS Ltd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwind css CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- custom css-->>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- LANG SWITCH -->
+
+    <div class="flex justify-end p-4">
+        <button onclick="SetLang('fr')" class="lang-switch">FR</button>
+        <button onclick="SetLang('en')" class="lang-switch">EN</button>
+
+    </div>
+
+    
+    
+    <!-- HEADER -->
+    <header class="bg-white shadow p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-blue-800">N&M EXPPRESS Ltd</h1>
+                <p class="italic text gray-500  lang lang-en">"THE PERFECT LOGISTICS"</p>
+                <p class="italic text-gray-500  lang lang-fr hidden">"LA LOGISTIQUE PARFAITE"</p>
+            </div>
+            <a href="https://wa.me/250788699245" class="btn-whatsapp">Whatsapp</a>
+
+            
+        </div>
+
+    </header>
+    <!-- Hero Image -->
+    <section class="container mx-auto mt-8">
+        <img src="https://images.unsplash.com/photo-1600267165558-533431c0bbda?auto=format&fit=crop&w=1350&q=80" alt="Shipping container aerial view" class="w-full h-96 object-cover rounded-xl shadow-lg">
+    </section>
+    
+
+
+    <!--MAIN CONTENT-->
+
+    <main class="max-w-3xl mx-auto bg-white p-6 mt-6 rounded shadow">
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4 lang lang-en">Our unique service</h2>
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4 lang lang-fr hidden">Nos services unique</h2>
+
+
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li class="lang lang-en">Shipping and China to Rwanda</li>
+            <li class="lang lang-fr hidden">Expédition de la Chine vers le Rwanda</li>
+
+            <li class="lang lang-en"> Product sourcing</li>
+            <li class="lang lang-fr hidden">Recherche de produits</li>
+            
+            <li class="lang lang-en"> Buyer invitation for Canton Fairs + Free Hotel & Transport</li>
+            <li class="lang lang-fr hidden">Invitation a la foire de Canton + hôtel et transport gratuits</li>
+            
+            <li class="lang lang-en"> National Road Transport</li>
+            <li class="lang lang-fr hidden">Transport routier national</li>
+
+            <li class="lang lang-en"> Customs clearance</li>
+            <li class="lang lang-fr hidden">Dédouanement</li>
+
+            <li class="lang lang-en"> Money Transfer & Currency Exchange</li>
+            <li class="lang lang-fr hidden">Transfert d'argent et change de devises</li>
+            
+            <li class="lang lang-en">Study in China with Scholarship</li>
+            <li class="lang lang-fr hidden">Étudier en Chine avec bourse</li>
+
+        </ul>
+    </main>
+
+    <!--Image gallery-->
+    <section class="gallery-section">
+        <h2 class="section-title text-center lang lang-en">Our Logistics in action</h2>
+        <h2 class="section-title text-center lang lang-fr hidden">Notre logistique en action</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1600267165558-533431c0bbda" alt="Shipping container" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1581091012184-5c8f8291cdde" alt="Logistics truck" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1613828832284-9f2dbb922f96" alt="Warehouse logistics" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1612198246019-5e4bfa5b300e" alt="Air freight" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1556742031-c6961e8560b0" alt="Client communication" class="gallery-img">
+        </div>
+        <!-- CONTACT -->
+    </section>
+    
+    
+    <section class="max-w-3xl mx-auto bg-gray-50 p-6 mt-6 rounded shadow">
+        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang lang-en"> Contact & Address</h3>
+        <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang lang-fr hidden"> Contact & Adresse</h3>
+
+        <p> Phone : <strong> +250 788 586 822</strong> / <strong>+250 788 699 245 </strong></p>
+        <p> Email : <a href="mailto: nmexpressltd@gmail.com" class="text-blue-600 underline">nmexpressltd@gmail.com</a></p>
+        <p> Address :Ubumwe House, Kimihurura KG 5 Ave 1 </p>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-blue-900 text-white text-center p-4 mt-6 ">
+        <p class="lang lang-en">&copy; 2025 N&M EXPPRESS Ltd - All right reserved</p>
+        <p class="lang lang-fr hidden">&copy; 2025 N&M EXPPRESS Ltd - Tous droits réservés</p>
+        <div class="mt-2">
+            <a href="#" class="footer-link">Facebook</a>
+            <a href="#" class="footer-link">Instagram</a>
+            <a href="#" class="footer-link">LinkedIn</a>
+        </div>
+    </footer>
+
+
+    <script>
+        function setLang(lang){
+            document.querySelectorAll('.lang').forEach(el => el)
+            document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
+        }
+
+        // default language: English
+        setLang('en');
+
+    </script>
+    </body>
+</html>
+<!-- END OF HTML -->
