@@ -14,9 +14,8 @@
     <!-- LANG SWITCH -->
 
     <div class="flex justify-end p-4">
-        <button onclick="setLang('fr')" class="lang-switch">FR</button>
-        <button onclick="setLang('en')" class="lang-switch">EN</button>
-
+       <button onclick="setLang('fr')" class="lang-switch">FR</button>
+       <button onclick="setLang('en')" class="lang-switch">EN</button>
     </div>
 
     
@@ -28,8 +27,10 @@
                 <h1 class="text-3xl font-bold text-blue-800">N&M EXPPRESS Ltd</h1>
                 <p class="italic text-gray-500  lang lang-en">"THE PERFECT LOGISTICS"</p>
                 <p class="italic text-gray-500  lang lang-fr hidden">"LA LOGISTIQUE PARFAITE"</p>
+            
             </div>
-            <a href="https://wa.me/250788699245" class="btn-whatsapp">Whatsapp</a>
+            <a href="https://wa.me/250788699245" class="btn-whatsapp">WhatsApp</a>
+
 
             
         </div>
@@ -37,7 +38,7 @@
     </header>
     <!-- Hero Image -->
     <section class="container mx-auto mt-8">
-        <img src="https://cdn.pixabay.com/photo/2016/12/27/21/03/container-1939076_1280.jpg" 
+        <img src="img/container-1012422_1280.jpg"
              alt="Shipping container aerial view" 
              class="w-full h-96 object-cover rounded-xl shadow-lg">
     </section>
@@ -48,7 +49,7 @@
 
     <main class="max-w-3xl mx-auto bg-white p-6 mt-6 rounded shadow">
         <h2 class="text-2xl font-semibold text-blue-700 mb-4 lang lang-en">Our unique service</h2>
-        <h2 class="text-2xl font-semibold text-blue-700 mb-4 lang lang-fr hidden">Nos services unique</h2>
+        <h2 class="text-2xl font-semibold text-blue-700 mb-4 lang lang-fr hidden">Nos services uniques</h2>
 
 
         <ul class="list-disc list-inside space-y-2 text-gray-700">
@@ -78,15 +79,13 @@
 
     <!--Image gallery-->
     <section class="gallery-section mt-6">
-        <h2 class="section-title text-center lang lang-en">Our Logistics in action</h2>
-        <h2 class="section-title text-center lang lang-fr hidden">Notre logistique en action</h2>
+        <h2 class="text-2xl font-semibold text-center mb-4 lang lang-en">Our Logistics in action</h2>
+        <h2 class="text-2xl font-semibold text-center mb-4 lang lang-fr hidden">Notre logistique en action</h2>
         <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-            <img src="https://cdn.pixabay.com/photo/2016/12/27/21/03/container-1939076_1280.jpg" alt="Container ship in port" class="gallery-img">
-            <img src="https://cdn.pixabay.com/photo/2016/11/23/15/40/aircraft-1850273_1280.jpg" alt="Airplane cargo transport" class="gallery-img">
-            <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/warehouse-1954373_1280.jpg" alt="Large logistics warehouse" class="gallery-img">
-            <img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/box-1866497_1280.jpg" alt="Packages ready for delivery" class="gallery-img">
-            <img src="https://cdn.pixabay.com/photo/2017/06/09/10/25/logistics-2389232_1280.jpg" alt="Truck transporting goods" class="gallery-img">
-            <img src="https://cdn.pixabay.com/photo/2017/07/31/11/21/truck-2565264_1280.jpg" alt="Back view of a delivery truck" class="gallery-img">
+            <img src="img/container-1012422_1280.jpg" alt="Container ship in port" class="gallery-img">
+            <img src="img/airplane-8892881_640.jpg" alt="Cargo airplane" class="gallery-img">
+            <img src="img/e-commerce-8676517_1280.jpg" alt="E-commerce process" class="gallery-img">
+            <img src="img/ai-generated-8718610_640.jpg" alt="AI concept" class="gallery-img">
         </div>
 
         
@@ -95,7 +94,7 @@
 
     <!-- CONTACT -->
     
-    <section class="max-w-3xl mx-auto bg-gray-50 p-6 mt-6 rounded shadow">
+    <section class="max-w-3xl mx-auto bg-gray-100 p-6 mt-6 rounded shadow">
         <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang-en"> Contact & Address</h3>
         <h3 class="text-xl font-bold text-blue-700 mb-2 lang lang-fr hidden"> Contact & Adresse</h3>
 
@@ -109,7 +108,7 @@
     <footer class="bg-blue-900 text-white text-center p-4 mt-6 ">
         <p class="lang lang-en">&copy; 2025 N&M EXPPRESS Ltd - All rights reserved</p>
         <p class="lang lang-fr hidden">&copy; 2025 N&M EXPPRESS Ltd - Tous droits réservés</p>
-        <div class="mt-2">
+        <div class="mt-2 space-x-4">
             <a href="#" class="footer-link">Facebook</a>
             <a href="#" class="footer-link">Instagram</a>
             <a href="#" class="footer-link">LinkedIn</a>
@@ -118,7 +117,7 @@
 
 
     <script>
-        function setLang(lang){
+        function setLang(lang) {
             document.documentElement.lang = lang;
             document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.remove('hidden'));
